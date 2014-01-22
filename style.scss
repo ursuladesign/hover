@@ -1,0 +1,140 @@
+//------------------
+// IMAGE MODULE
+//------------------
+%dimensions {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.view {
+  @extend %dimensions;
+  position: relative;
+  float: left;
+  text-align: center;
+  border: 10px solid #333;
+  margin: 10px;
+  cursor: default;
+  background: white url("http://i.imgur.com/7gAwugE.gif") no-repeat center center;
+
+
+  .mask, .content {
+    @extend %dimensions;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    @extend %dimensions;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+
+  h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    background: #000;
+    margin: 20px 0 0 0;
+  }
+
+  p {
+    position: relative;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 20px 20px;
+  }
+
+  a.info {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 14px;
+  }
+}
+
+//------------------
+// INITIAL POSITION RULES
+//------------------
+@mixin transition($type, $time, $ease) {
+  -webkit-transition:$type $time $ease;
+  -moz-transition:$type $time $ease;
+  -o-transition:$type $time $ease;
+  transition:$type $time $ease;
+}
+
+@mixin transform($type, $magnitude) {
+  -webkit-transform:$type + '(' + $magnitude + ')';
+  -moz-transform:$type + '(' + $magnitude + ')';
+  -ms-transform:$type + '(' + $magnitude + ')';
+  -o-transform:$type + '(' + $magnitude + ')';
+  transform:$type + '(' + $magnitude + ')';
+}
+
+.first {
+  img{
+    @include transition(all, 0.2s, linear);
+  }
+
+  .mask {
+    opacity: 0;
+    background-color: rgba(219,127,8, 0.7);
+    @include transition(all, 0.4s, ease-in-out);
+  }
+
+  h2 {
+    @include transform(translateY,-100px);
+    @include transition(all, 0.2s, ease-in-out);
+    opacity: 0;
+  }
+
+  p {
+    @include transform(translateY,100px);
+    @include transition(all, 0.2s, linear);
+    opacity: 0;
+  }
+
+  a.info{
+    @include transition(all, 0.2s, ease-in-out);
+    opacity: 0;
+  }
+
+  //------------------
+  // HOVER RULES
+  //------------------
+  @mixin transition-delay($time) {
+    -webkit-transition-delay:$time;
+    -moz-transition-delay:$time;
+    -o-transition-delay:$time;
+    transition-delay:$time;
+  }
+  &:hover img {
+    @include transform(scale,1.1);
+  }
+
+  &:hover .mask {
+    opacity: 1;
+  }
+
+  &:hover h2,
+  &:hover p,
+  &:hover a.info {
+    @include transform(translateY,0px);
+    opacity: 1;
+  }
+
+  &:hover p {
+   @include transition-delay(0.1s);
+  }
+  &:hover a.info {
+    @include transition-delay(0.2s);
+  }
+
+}
