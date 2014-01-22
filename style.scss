@@ -1,4 +1,16 @@
 //------------------
+//BASE RULES
+//------------------
+#wrapper {
+  font-family: Helvetica;
+}
+
+main > div{
+  display: inline-block;
+  margin: -2px;
+}
+
+//------------------
 // IMAGE MODULE
 //------------------
 %dimensions {
@@ -10,10 +22,8 @@
 .view {
   @extend %dimensions;
   position: relative;
-  float: left;
   text-align: center;
   border: 10px solid #333;
-  margin: 10px;
   cursor: default;
   background: white url("http://i.imgur.com/7gAwugE.gif") no-repeat center center;
 
@@ -39,14 +49,13 @@
     color: #fff;
     font-size: 17px;
     padding: 10px;
-    background: #000;
+    background: #333;
     margin: 20px 0 0 0;
   }
 
   p {
     position: relative;
     text-align: center;
-    font-family: Georgia, serif;
     font-size: 12px;
     color: #fff;
     padding: 10px 20px 20px;
