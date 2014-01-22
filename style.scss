@@ -1,15 +1,45 @@
 //------------------
+//MIXINS
+//------------------
+@mixin transition($type, $time, $ease) {
+  -webkit-transition:$type $time $ease;
+  -moz-transition:$type $time $ease;
+  -o-transition:$type $time $ease;
+  transition:$type $time $ease;
+}
+
+@mixin transform($type, $magnitude) {
+  -webkit-transform:$type + '(' + $magnitude + ')';
+  -moz-transform:$type + '(' + $magnitude + ')';
+  -ms-transform:$type + '(' + $magnitude + ')';
+  -o-transform:$type + '(' + $magnitude + ')';
+  transform:$type + '(' + $magnitude + ')';
+}
+
+@mixin transition-delay($time) {
+  -webkit-transition-delay:$time;
+  -moz-transition-delay:$time;
+  -o-transition-delay:$time;
+  transition-delay:$time;
+}
+
+//------------------
 //BASE RULES
 //------------------
-#wrapper {
+body {
   font-family: Helvetica;
 }
 
-main > div{
-  display: inline-block;
-  margin: -2px;
+.l-grid{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+.l-grid > li {
+  display: inline-block;
+  margin: 0;
+}
 //------------------
 // IMAGE MODULE
 //------------------
@@ -25,8 +55,6 @@ main > div{
   text-align: center;
   border: 10px solid #333;
   cursor: default;
-  background: white url("http://i.imgur.com/7gAwugE.gif") no-repeat center center;
-
 
   .mask, .content {
     @extend %dimensions;
@@ -72,21 +100,6 @@ main > div{
 //------------------
 // INITIAL POSITION RULES
 //------------------
-@mixin transition($type, $time, $ease) {
-  -webkit-transition:$type $time $ease;
-  -moz-transition:$type $time $ease;
-  -o-transition:$type $time $ease;
-  transition:$type $time $ease;
-}
-
-@mixin transform($type, $magnitude) {
-  -webkit-transform:$type + '(' + $magnitude + ')';
-  -moz-transform:$type + '(' + $magnitude + ')';
-  -ms-transform:$type + '(' + $magnitude + ')';
-  -o-transform:$type + '(' + $magnitude + ')';
-  transform:$type + '(' + $magnitude + ')';
-}
-
 .first {
   img{
     @include transition(all, 0.2s, linear);
@@ -118,12 +131,6 @@ main > div{
   //------------------
   // HOVER RULES
   //------------------
-  @mixin transition-delay($time) {
-    -webkit-transition-delay:$time;
-    -moz-transition-delay:$time;
-    -o-transition-delay:$time;
-    transition-delay:$time;
-  }
   &:hover img {
     @include transform(scale,1.1);
   }
@@ -141,9 +148,9 @@ main > div{
 
   &:hover p {
    @include transition-delay(0.1s);
-  }
-  &:hover a.info {
-    @include transition-delay(0.2s);
-  }
+ }
+ &:hover a.info {
+  @include transition-delay(0.2s);
+}
 
 }

@@ -1,9 +1,14 @@
-#wrapper {
+body {
   font-family: Helvetica; }
 
-main > div {
+.l-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.l-grid > li {
   display: inline-block;
-  margin: -2px; }
+  margin: 0; }
 
 .view, .view .mask, .view .content, .view img {
   width: 200px;
@@ -14,8 +19,7 @@ main > div {
   position: relative;
   text-align: center;
   border: 10px solid #333;
-  cursor: default;
-  background: white url("http://i.imgur.com/7gAwugE.gif") no-repeat center center; }
+  cursor: default; }
   .view .mask, .view .content {
     position: absolute;
     top: 0;
