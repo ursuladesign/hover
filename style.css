@@ -1,0 +1,73 @@
+.view, .view .mask, .view .content, .view img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden; }
+
+.view {
+  position: relative;
+  float: left;
+  text-align: center;
+  border: 10px solid #333;
+  margin: 10px;
+  cursor: default;
+  background: white url("http://i.imgur.com/7gAwugE.gif") no-repeat center center; }
+  .view .mask, .view .content {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .view img {
+    margin: 0 auto;
+    display: block;
+    position: relative; }
+  .view h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba 0, 0, 0, 0.8;
+    margin: 20px 0 0 0; }
+  .view p {
+    position: relative;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 20px 20px; }
+  .view a.info {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 14px; }
+
+.first img {
+  transition: all 0.2s linear; }
+.first .mask {
+  opacity: 0;
+  background-color: rgba(219, 127, 8, 0.7);
+  transition: all 0.4s ease-in-out; }
+.first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+.first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear; }
+.first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+.first .first:hover img {
+  transform: scale(1.1); }
+.first .first:hover .mask {
+  opacity: 1; }
+.first .first:hover h2,
+.first .first:hover p,
+.first .first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px); }
+.first .first:hover p {
+  transition-delay: 0.1s; }
+.first .first:hover a.info {
+  transition-delay: 0.2s; }
