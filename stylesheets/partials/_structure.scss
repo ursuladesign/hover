@@ -1,0 +1,17 @@
+body {
+  font-family: Helvetica;
+  background-color: #2980b9;
+  margin: 0;
+}
+
+main {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+}
+
+main > header{
+  height: 50px;
+}

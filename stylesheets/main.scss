@@ -1,45 +1,7 @@
-//------------------
-//MIXINS
-//------------------
-@mixin transition($type, $time, $ease) {
-  -webkit-transition:$type $time $ease;
-  -moz-transition:$type $time $ease;
-  -o-transition:$type $time $ease;
-  transition:$type $time $ease;
-}
+@import "partials/base";
+@import "partials/structure";
+@import "partials/grids";
 
-@mixin transform($type, $magnitude) {
-  -webkit-transform:$type + '(' + $magnitude + ')';
-  -moz-transform:$type + '(' + $magnitude + ')';
-  -ms-transform:$type + '(' + $magnitude + ')';
-  -o-transform:$type + '(' + $magnitude + ')';
-  transform:$type + '(' + $magnitude + ')';
-}
-
-@mixin transition-delay($time) {
-  -webkit-transition-delay:$time;
-  -moz-transition-delay:$time;
-  -o-transition-delay:$time;
-  transition-delay:$time;
-}
-
-//------------------
-//BASE RULES
-//------------------
-body {
-  font-family: Helvetica;
-}
-
-.l-grid{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.l-grid > li {
-  display: inline-block;
-  margin: 0;
-}
 //------------------
 // IMAGE MODULE
 //------------------
@@ -53,7 +15,7 @@ body {
   @extend %dimensions;
   position: relative;
   text-align: center;
-  border: 10px solid #333;
+  border: 10px solid $gray;
   cursor: default;
 
   .mask, .content {
@@ -77,7 +39,7 @@ body {
     color: #fff;
     font-size: 17px;
     padding: 10px;
-    background: #333;
+    background: $gray;
     margin: 20px 0 0 0;
   }
 
@@ -107,7 +69,7 @@ body {
 
   .mask {
     opacity: 0;
-    background-color: rgba(219,127,8, 0.7);
+    background-color: $orange;
     @include transition(all, 0.4s, ease-in-out);
   }
 
