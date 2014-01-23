@@ -1,17 +1,34 @@
 hover
 =====
 ###sass discoveries
-constantly update css file: `sass --watch main.scss:main.css`
+######constantly update css file:
+`sass --watch main.scss:main.css`
 
-mixins can use elipses for an unknown # of arguments: `@mixin transform($type...) {}`
+######mixins can use elipses for an unknown # of arguments:
+`@mixin transform($type...) {}`
+
+######the content directive:
+```
+@mixin keyframes ($animation-name) {
+  @-webkit-keyframes $animation-name{
+    @content;
+  }
+}
+```
 
 ###css discoveries
-#####transitions: 
-`.example {`
-`transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay]`
-`;}`
+######transitions nuances:
+```
+.example {
+  transition:
+    [transition-property]
+    [transition-duration]
+    [transition-timing-function]
+    [transition-delay]
+;}
+```
 
-#####ease:
+######definition of ease:
 
 `ease-in` will start the animation slowly, and finish at full speed.
 
