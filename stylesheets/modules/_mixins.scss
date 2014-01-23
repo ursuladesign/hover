@@ -5,12 +5,12 @@
   transition:$type $time $ease;
 }
 
-@mixin transform($type, $magnitude) {
-  -webkit-transform:$type + '(' + $magnitude + ')';
-  -moz-transform:$type + '(' + $magnitude + ')';
-  -ms-transform:$type + '(' + $magnitude + ')';
-  -o-transform:$type + '(' + $magnitude + ')';
-  transform:$type + '(' + $magnitude + ')';
+@mixin transform($type-magnitude...) {
+  -webkit-transform:$type-magnitude;
+  -moz-transform:$type-magnitude;
+  -ms-transform:$type-magnitude;
+  -o-transform:$type-magnitude;
+  transform:$type-magnitude;
 }
 
 @mixin transition-delay($time) {
@@ -23,6 +23,5 @@
 %box-dimensions {
   width: 200px;
   height: 200px;
-  overflow: hidden;
 }
 
