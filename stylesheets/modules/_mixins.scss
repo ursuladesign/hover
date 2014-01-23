@@ -20,6 +20,32 @@
   transition-delay:$time;
 }
 
+@mixin animation($type) {
+  -webkit-animation:$type;
+  -moz-animation:$type;
+  -ms-animation:$type;
+  -o-animation:$type;
+  animation:$type;
+}
+
+@mixin keyframes ($animation-name) {
+    @-webkit-keyframes $animation-name{
+        @content;
+    }
+    @-moz-keyframes $animation-name{
+        @content;
+    }
+    @-ms-keyframes $animation-name{
+        @content;
+    }
+    @-o-keyframes $animation-name{
+        @content;
+    }
+    @keyframes $animation-name{
+        @content;
+    }
+}
+
 %box-dimensions {
   width: 200px;
   height: 200px;
