@@ -1,3 +1,8 @@
+.box, .box .mask, .box .content, .box img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden; }
+
 body {
   font-family: Helvetica;
   background-color: #2980b9;
@@ -22,25 +27,20 @@ main > header {
   display: inline-block;
   margin: 0; }
 
-.view, .view .mask, .view .content, .view img {
-  width: 200px;
-  height: 200px;
-  overflow: hidden; }
-
-.view {
+.box {
   position: relative;
   text-align: center;
   border: 10px solid #333333;
   cursor: default; }
-  .view .mask, .view .content {
+  .box .mask, .box .content {
     position: absolute;
     top: 0;
     left: 0; }
-  .view img {
+  .box img {
     margin: 0 auto;
     display: block;
     position: relative; }
-  .view h2 {
+  .box h2 {
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -49,13 +49,13 @@ main > header {
     padding: 10px;
     background: #333333;
     margin: 20px 0 0 0; }
-  .view p {
+  .box p {
     position: relative;
     text-align: center;
     font-size: 12px;
     color: #fff;
     padding: 10px 20px 20px; }
-  .view a.info {
+  .box a.info {
     display: inline-block;
     text-decoration: none;
     color: #fff;
