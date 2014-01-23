@@ -1,7 +1,7 @@
 hover
 =====
 ###sass discoveries
-cd into stylesheets directory: `sass --watch main.scss:main.css`
+constantly update css file: `sass --watch main.scss:main.css`
 
 mixins can use elipses for an unknown # of arguments: `@mixin transform($type...) {}`
 
