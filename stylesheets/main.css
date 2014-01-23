@@ -61,7 +61,8 @@ main > header {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    padding: 7px 14px; }
+    padding: 7px 14px;
+    font-size: 10px; }
 
 .vertical img {
   -webkit-transition: all 0.2s linear;
@@ -70,17 +71,17 @@ main > header {
   transition: all 0.2s linear; }
 .vertical .mask {
   opacity: 0;
-  background-color: rgba(219, 127, 8, 0.7);
+  background-color: #999999;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
 .vertical h2 {
-  -webkit-transform: translateY, -100px;
-  -moz-transform: translateY, -100px;
-  -ms-transform: translateY, -100px;
-  -o-transform: translateY, -100px;
-  transform: translateY, -100px;
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  transform: translateY(-100px);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -137,22 +138,20 @@ main > header {
 .pivot .mask {
   height: 300px;
   width: 300px;
-  background-color: rgba(219, 127, 8, 0.7);
+  background-color: #999999;
   padding: 60px;
   opacity: 0;
-  -webkit-transform: translate(265px, 145px), rotate(45deg);
-  -moz-transform: translate(265px, 145px), rotate(45deg);
-  -ms-transform: translate(265px, 145px), rotate(45deg);
-  -o-transform: translate(265px, 145px), rotate(45deg);
-  transform: translate(265px, 145px), rotate(45deg);
+  -webkit-transform: translate(265px, 145px) rotate(45deg);
+  -moz-transform: translate(265px, 145px) rotate(45deg);
+  -ms-transform: translate(265px, 145px) rotate(45deg);
+  -o-transform: translate(265px, 145px) rotate(45deg);
+  transform: translate(265px, 145px) rotate(45deg);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 .pivot h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  background: transparent;
-  margin: 20px, 40px, 0px, 40px;
+  background: #333333;
   -webkit-transform: translate(200px, -200px);
   -moz-transform: translate(200px, -200px);
   -ms-transform: translate(200px, -200px);
@@ -183,12 +182,16 @@ main > header {
   -o-transition: all 0.2s 0.1s ease-in-out;
   transition: all 0.2s 0.1s ease-in-out; }
 .pivot:hover .mask {
-  opacity: 1;
+  opacity: .8;
   -webkit-transform: translate(-80px, -125px) rotate(45deg);
   -moz-transform: translate(-80px, -125px) rotate(45deg);
   -ms-transform: translate(-80px, -125px) rotate(45deg);
   -o-transform: translate(-80px, -125px) rotate(45deg);
-  transform: translate(-80px, -125px) rotate(45deg); }
+  transform: translate(-80px, -125px) rotate(45deg);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
 .pivot:hover h2, .pivot:hover p, .pivot:hover a.info {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -210,3 +213,18 @@ main > header {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
+
+.zoom img {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+.zoom .mask {
+  opacity: 0;
+  background-color: #999999;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+.zoom:hover .mask {
+  opacity: 1; }
