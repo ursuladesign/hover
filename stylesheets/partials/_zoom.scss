@@ -1,0 +1,41 @@
+.zoom {
+  img {
+    @include transition(all 0.4s ease-in-out);
+  }
+
+  .mask{
+    opacity: 0;
+    background-color: $light-gray;
+    @include transform(scale(0) rotate(180deg));
+    @include transition(all 0.4s ease-in);
+  }
+
+  h2{
+    @include transform(translate(-200px,-200px) rotate(45deg));
+    @include transition(all 0.4s ease-out);
+  }
+
+  p{
+    @include transform(translate(200px,200px) rotate(-45deg));
+    @include transition(all 0.1s ease-out);
+  }
+
+  a.info{
+    @include transform(scale(0));
+    @include transition(all 0.2s ease-in);
+  }
+
+  &:hover h2,
+  &:hover p {
+    @include transform(translate(0px,0px) rotate(0deg));
+    @include transition(all 0.4s ease-out);
+  }
+
+
+  &:hover .mask,
+  &:hover a.info {
+    opacity: 1;
+    @include transform(scale(1) rotate(0deg));
+    @include transition(all 0.3s ease-out);
+  }
+}

@@ -1,0 +1,55 @@
+.pivot {
+  img{
+    @include transition(all 0.2 ease-in);
+  }
+
+  .mask{
+    height:300px;
+    width:300px;
+    background-color: $light-gray;
+    padding: 60px;
+    opacity: 0;
+    @include transform(translate(265px,145px) rotate(45deg));
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  h2{
+    background: $gray;
+    @include transform(translate(200px,-200px));
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  p {
+    @include transform(translate(-200px, 200px));
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  a.info {
+    @include transform(translate(0px, 100px));
+    @include transition(all 0.2s 0.1s ease-in-out);
+  }
+
+  &:hover .mask {
+    opacity: .8;
+    @include transform(translate(-80px, -125px) rotate(45deg));
+    @include transition(all 0.8s ease-in-out);
+  }
+
+  &:hover h2,
+  &:hover p,
+  &:hover a.info{
+    @include transform(translate(0px,0px));
+  }
+
+  &:hover h2 {
+    @include transition-delay(0.1s);
+  }
+
+  &:hover a.info {
+    @include transition-delay(0.3s);
+  }
+
+  &:hover p{
+    @include transition(all 0.4s ease-in-out);
+  }
+}
