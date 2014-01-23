@@ -1,62 +1,6 @@
-@import "partials/base";
-@import "partials/structure";
-@import "partials/grids";
-@import "partials/box";
+@import "partials/_base";
+@import "partials/_structure";
+@import "partials/_grids";
+@import "partials/_box";
+@import "partials/_vertical";
 
-//------------------
-// INITIAL POSITION RULES
-//------------------
-.first {
-  img{
-    @include transition(all, 0.2s, linear);
-  }
-
-  .mask {
-    opacity: 0;
-    background-color: $orange;
-    @include transition(all, 0.4s, ease-in-out);
-  }
-
-  h2 {
-    @include transform(translateY,-100px);
-    @include transition(all, 0.2s, ease-in-out);
-    opacity: 0;
-  }
-
-  p {
-    @include transform(translateY,100px);
-    @include transition(all, 0.2s, linear);
-    opacity: 0;
-  }
-
-  a.info{
-    @include transition(all, 0.2s, ease-in-out);
-    opacity: 0;
-  }
-
-  //------------------
-  // HOVER RULES
-  //------------------
-  &:hover img {
-    @include transform(scale,1.1);
-  }
-
-  &:hover .mask {
-    opacity: 1;
-  }
-
-  &:hover h2,
-  &:hover p,
-  &:hover a.info {
-    @include transform(translateY,0px);
-    opacity: 1;
-  }
-
-  &:hover p {
-   @include transition-delay(0.1s);
- }
- &:hover a.info {
-  @include transition-delay(0.2s);
-}
-
-}
