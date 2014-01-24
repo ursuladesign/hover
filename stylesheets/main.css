@@ -341,7 +341,6 @@ main > header {
   -o-transition: all 0.2s ease-in-out 0.1s;
   transition: all 0.2s ease-in-out 0.1s; }
 .bounce p {
-  color: #333;
   -webkit-transform: translateY(-200px);
   -moz-transform: translateY(-200px);
   -ms-transform: translateY(-200px);
@@ -618,3 +617,31 @@ main > header {
     -ms-transform: translateY(0px);
     -o-transform: translateY(0px);
     transform: translateY(0px); } }
+
+/*sticky footer implementation
+some duplication of code between here and structure.scss
+keeping it so that I can refer back to the original formatting of the sticky footer
+*/
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+footer, #wrapper:after {
+  height: 50px; }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 10px;
+  text-align: center; }
+  footer p {
+    padding-top: 20px; }
