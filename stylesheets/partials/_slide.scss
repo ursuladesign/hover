@@ -1,0 +1,23 @@
+.slide {
+  img {
+    @include transition(all 0.4s ease-in-out);
+  }
+
+  .mask{
+    opacity: 1;
+    background-color: $light-gray;
+    @include transform(translateX(-200px));
+    @include transition(all 0.4s ease-in-out);
+  }
+
+  &:hover img {
+    @include transform(translateX(200px));
+    @include transition(all 0.4s ease-in-out);
+  }
+
+  &:hover .mask {
+    opacity: 1;
+    @include transform(translateX(0px));
+    @include transition(all 0.4s ease-in-out);
+  }
+}

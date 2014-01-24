@@ -1,0 +1,33 @@
+/*sticky footer implementation
+some duplication of code between here and structure.scss
+keeping it so that I can refer back to the original formatting of the sticky footer
+*/
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, #wrapper:after {
+  height: 50px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+
+  p {
+    padding-top: 20px;
+  }
+}

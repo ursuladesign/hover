@@ -1,0 +1,55 @@
+.bounce{
+
+  .mask{
+    background-color: $light-gray;
+    top: -200px;
+    opacity: 0;
+    @include transition(all .3s ease-out .5s);
+  }
+
+  h2{
+    @include transform(translateY(-200px));
+    @include transition(all .2s ease-in-out .1s);
+  }
+
+  p {
+    @include transform(translateY(-200px));
+    @include transition(all 0.2s ease-in-out 0.2s);
+  }
+
+  a.info {
+    @include transform(translateY(-200px));
+    @include transition(all 0.2s ease-in-out 0.3s);
+  }
+
+  &:hover .mask {
+    top: 0px;
+    opacity: 1;
+    @include transition-delay(0s);
+    @include animation(bounceY .9s linear);
+  }
+
+  &:hover h2 {
+    @include transform(translateY(0px));
+    @include transition-delay(0.4s);
+  }
+
+  &:hover p {
+    @include transform(translateY(0px));
+    @include transition-delay(.2s);
+  }
+
+  &:hover a.info {
+    @include transform(translateY(0px));
+    @include transition-delay(0s);
+  }
+}
+
+@include keyframes("bounceY") {
+  0% { @include transform(translateY(-205px)); }
+  40% { @include transform(translateY(-100px)); }
+  65% { @include transform(translateY(-52px)); }
+  82% { @include transform(translateY(-25px)); }
+  92% { @include transform(translateY(-12px)); }
+  55%, 75%, 87%, 97%, 100% { @include transform(translateY(0px));}
+}
