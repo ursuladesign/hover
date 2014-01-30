@@ -9,7 +9,7 @@ body {
 main {
   text-align: center;
   background-color: #fff;
-  margin: 50px; }
+  padding: 50px; }
 
 main > header {
   height: 50px; }
@@ -614,6 +614,80 @@ main > header {
     -ms-transform: translateY(0px);
     -o-transform: translateY(0px);
     transform: translateY(0px); } }
+
+.slice .mask1, .slice .mask2 {
+  background-color: #999999;
+  height: 200px;
+  width: 200px;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out 0.6s;
+  -moz-transition: all 0.3s ease-in-out 0.6s;
+  -o-transition: all 0.3s ease-in-out 0.6s;
+  transition: all 0.3s ease-in-out 0.6s; }
+.slice .mask1 {
+  left: auto;
+  right: 0;
+  -webkit-transform: rotate(56.6deg) translateX(-300px);
+  -moz-transform: rotate(56.6deg) translateX(-300px);
+  -ms-transform: rotate(56.6deg) translateX(-300px);
+  -o-transform: rotate(56.6deg) translateX(-300px);
+  transform: rotate(56.6deg) translateX(-300px);
+  -webkit-transform-origin: 100% 0%;
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -o-transform-origin: 100% 0%;
+  transform-origin: 100% 0%; }
+.slice .mask2 {
+  top: auto;
+  bottom: 0;
+  -webkit-transform: rotate(56.5deg) translateX(180px);
+  -moz-transform: rotate(56.5deg) translateX(180px);
+  -ms-transform: rotate(56.5deg) translateX(180px);
+  -o-transform: rotate(56.5deg) translateX(180px);
+  transform: rotate(56.5deg) translateX(180px);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%; }
+.slice .content {
+  background: rgba(0, 0, 0, 0.9);
+  height: 0px;
+  opacity: 0.5;
+  width: 361px;
+  overflow: hidden;
+  transform: rotate(-33.5deg) translate(-112px, 166px);
+  transform-origin: 0% 100%;
+  transition: all 0.4s ease-in-out 0.3s; }
+  .slice .content h2 {
+    background: transparent;
+    margin-top: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .slice .content a.info {
+    display: none; }
+.slice:hover .mask1, .slice:hover .mask2 {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s; }
+.slice:hover .mask1 {
+  -webkit-transform: rotate(56.5deg) translateX(1px);
+  -moz-transform: rotate(56.5deg) translateX(1px);
+  -ms-transform: rotate(56.5deg) translateX(1px);
+  -o-transform: rotate(56.5deg) translateX(1px);
+  transform: rotate(56.5deg) translateX(1px); }
+.slice:hover .mask2 {
+  -webkit-transform: rotate(56.5deg) translateX(-1px);
+  -moz-transform: rotate(56.5deg) translateX(-1px);
+  -ms-transform: rotate(56.5deg) translateX(-1px);
+  -o-transform: rotate(56.5deg) translateX(-1px);
+  transform: rotate(56.5deg) translateX(-1px); }
+.slice:hover .content {
+  height: 120px;
+  width: 300px;
+  opacity: 0.9;
+  top: 40px;
+  transform: rotate(0deg) translate(0px, 0px); }
 
 /*sticky footer implementation
 http://mystrd.at/modern-clean-css-sticky-footer/

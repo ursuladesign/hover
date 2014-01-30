@@ -13,6 +13,15 @@
   transform:$type-magnitude;
 }
 
+@mixin transform-origin($percentage) {
+  -webkit-transform-origin:$percentage;
+  -moz-transform-origin:$percentage;
+  -ms-transform-origin:$percentage;
+  -o-transform-origin:$percentage;
+  transform-origin:$percentage;
+}
+
+
 @mixin transition-delay($time) {
   -webkit-transition-delay:$time;
   -moz-transition-delay:$time;
@@ -29,21 +38,21 @@
 }
 
 @mixin keyframes ($animation-name) {
-    @-webkit-keyframes $animation-name{
-        @content;
-    }
-    @-moz-keyframes $animation-name{
-        @content;
-    }
-    @-ms-keyframes $animation-name{
-        @content;
-    }
-    @-o-keyframes $animation-name{
-        @content;
-    }
-    @keyframes $animation-name{
-        @content;
-    }
+  @-webkit-keyframes $animation-name{
+    @content;
+  }
+  @-moz-keyframes $animation-name{
+    @content;
+  }
+  @-ms-keyframes $animation-name{
+    @content;
+  }
+  @-o-keyframes $animation-name{
+    @content;
+  }
+  @keyframes $animation-name{
+    @content;
+  }
 }
 
 %box-dimensions {
