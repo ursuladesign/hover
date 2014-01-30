@@ -2,13 +2,17 @@
 http://mystrd.at/modern-clean-css-sticky-footer/
 */
 
+body {
+  margin: 0 0 50px; /* bottom = footer height */
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
 
 #wrapper {
-  margin: 0 0 50px; /* bottom = footer height */
+
 }
 
 footer {
